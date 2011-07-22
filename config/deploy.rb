@@ -22,6 +22,9 @@ set :repository,  "ssh://git@github.com:MaslovAnton/Safira.git"
 
 dpath = "/home/hosting_maslov/projects/safira7"
 
+set :scm_username, "MaslovAnton"
+
+
 set :user, "hosting_maslov"
 set :use_sudo, false
 set :deploy_to, dpath
