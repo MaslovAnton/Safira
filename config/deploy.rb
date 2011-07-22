@@ -1,6 +1,15 @@
-$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Для работы rvm
-require 'rvm/capistrano' # Для работы rvm
-require 'bundler/capistrano' # Для работы bundler. При изменении гемов bundler автоматически обновит все гемы на сервере, чтобы они в точности соответствовали гемам разработчика.
+$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
+require "rvm/capistrano"                  # Load RVM's capistrano plugin.
+set :rvm_ruby_string, 'ruby-1.9.2-p290'        # Or whatever env you want it to run in.
+set :rvm_type, :user
+
+set :default_environment, {
+  'PATH' => "/path/to/.rvm/gems/ruby-1.9.2-p290/bin:/path/to/.rvm/bin:/path/to/.rvm/ruby-1.9.2-p290/bin:$PATH",
+  'RUBY_VERSION' => 'ruby 1.8.7',
+  'GEM_HOME'     => '/path/to/.rvm/gems/ruby-1.9.2-p290',
+  'GEM_PATH'     => '/path/to/.rvm/gems/ruby-1.9.2-p290',
+  'BUNDLE_PATH'  => '/path/to/.rvm/gems/ruby-1.9.2-p290'  # If you are using bundler.
+}
 
 # _your_login_ - Поменять на ваш логин в панели управления
 # _your_project_ - Поменять на имя вашего проекта
@@ -9,7 +18,7 @@ require 'bundler/capistrano' # Для работы bundler. При измене�
 # У вас должна быть настроена авторизация ssh по сертификатам
 
 set :application, "Safira"
-set :repository,  "ssh://hosting_maslov@lithium.locum.ru/home/hosting_maslov/safira7.git"
+set :repository,  "ssh://git@github.com:MaslovAnton/Safira.git"
 
 dpath = "/home/hosting_maslov/projects/safira7"
 
