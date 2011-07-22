@@ -1,3 +1,7 @@
+$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Для работы rvm
+require 'rvm/capistrano' # Для работы rvm
+require 'bundler/capistrano' # Для работы bundler. При изменении гемов bundler автоматически обновит все гемы на сервере, чтобы они в точности соответствовали гемам разработчика.
+
 # _your_login_ - Поменять на ваш логин в панели управления
 # _your_project_ - Поменять на имя вашего проекта
 # _your_server_ - Поменять на имя вашего сервера (Указано на вкладке "FTP и SSH" вашей панели управления)
@@ -27,8 +31,8 @@ task :copy_database_config, roles => :app do
 end
 
 set :unicorn_rails, "/var/lib/gems/1.8/bin/unicorn_rails"
-set :unicorn_conf, "/etc/unicorn/_your_project_.maslov.rb"
-set :unicorn_pid, "/var/run/unicorn/_your_project_.maslov.pid"
+set :unicorn_conf, "/etc/unicorn/safira7.maslov.rb"
+set :unicorn_pid, "/var/run/unicorn/safira7.maslov.pid"
 
 # - for unicorn - #
 namespace :deploy do
