@@ -6,6 +6,13 @@ GIT
       spree_core (>= 0.50.0)
 
 GIT
+  remote: git://github.com/romul/spree_compare_products.git
+  revision: 2ad17e813790cdd6b9aef567e3e8cee3d523b23d
+  specs:
+    spree_compare_products (0.40.90)
+      spree_core (>= 0.40.99)
+
+GIT
   remote: git://github.com/spree/spree.git
   revision: 676b5c47990caad4483659ba4eff52c76a2e73ed
   branch: 0-60-stable
@@ -233,6 +240,7 @@ DEPENDENCIES
   mysql2 (~> 0.2.7)
   rails (= 3.0.9)
   spree!
+  spree_compare_products!
   spree_i18n!
   spree_reviews!
   synergy (~> 0.60.0)
