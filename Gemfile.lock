@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/romul/spree-reviews.git
+  revision: 5b18869613c58298fb38d7ff9d2b3169b38f5695
+  specs:
+    spree_reviews (0.50.1)
+      spree_core (>= 0.50.0)
+
+GIT
   remote: git://github.com/spree/spree.git
   revision: 676b5c47990caad4483659ba4eff52c76a2e73ed
   branch: 0-60-stable
@@ -163,6 +170,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.4)
+    raindrops (0.7.0)
     rake (0.9.2)
     rd_find_by_param (0.1.1)
       activerecord (~> 3.0)
@@ -209,9 +217,10 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.29)
-    unicorn (3.6.2)
-      kgio (~> 2.3)
+    unicorn (4.0.1)
+      kgio (~> 2.4)
       rack
+      raindrops (~> 0.6)
     warden (1.0.4)
       rack (>= 1.0)
     will_paginate (3.0.pre2)
@@ -225,6 +234,7 @@ DEPENDENCIES
   rails (= 3.0.9)
   spree!
   spree_i18n!
+  spree_reviews!
   synergy (~> 0.60.0)
   synergy_default_theme (= 1.0.2)
-  unicorn (~> 3.6.2)
+  unicorn (~> 4.0.1)
