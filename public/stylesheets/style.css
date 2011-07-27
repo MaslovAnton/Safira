@@ -1075,3 +1075,21 @@ div#jGrowl div.jGrowl-notification.error {
   background: #a50000;
 }
 
+/* Sign up button */
+
+a.zvonok {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 190px;
+  color: #fff;
+  background: #5c2266;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 10px;
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+

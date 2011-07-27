@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110606150524) do
+ActiveRecord::Schema.define(:version => 20110701112239) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -84,6 +84,23 @@ ActiveRecord::Schema.define(:version => 20110606150524) do
 
   add_index "configurations", ["name", "type"], :name => "index_configurations_on_name_and_type"
 
+  create_table "contact_topics", :force => true do |t|
+    t.string   "name"
+    t.string   "emails"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "order_number"
+    t.text     "message"
+    t.integer  "topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "countries", :force => true do |t|
     t.string  "iso_name"
     t.string  "iso"
@@ -133,6 +150,16 @@ ActiveRecord::Schema.define(:version => 20110606150524) do
     t.datetime "updated_at"
   end
 
+  create_table "inquiries", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "inquiry_type"
+    t.string   "order_no"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "inventory_units", :force => true do |t|
     t.integer  "variant_id"
     t.integer  "order_id"
@@ -171,6 +198,16 @@ ActiveRecord::Schema.define(:version => 20110606150524) do
   create_table "mail_methods", :force => true do |t|
     t.string   "environment"
     t.boolean  "active",      :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", :force => true do |t|
+    t.integer  "topic_id"
+    t.string   "name",         :null => false
+    t.string   "email",        :null => false
+    t.string   "order_number"
+    t.text     "message",      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -550,6 +587,14 @@ ActiveRecord::Schema.define(:version => 20110606150524) do
   end
 
   add_index "tokenized_permissions", ["permissable_id", "permissable_type"], :name => "index_tokenized_name_and_type"
+
+  create_table "topics", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "payment"
+  end
 
   create_table "trackers", :force => true do |t|
     t.string   "environment"

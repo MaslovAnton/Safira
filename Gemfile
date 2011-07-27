@@ -10,8 +10,12 @@ gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-60-stable
 gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git'
 gem 'synergy', '~> 0.60.0'
 gem 'synergy_default_theme', '1.0.2'
-gem 'spree_reviews', :git => 'git://github.com/romul/spree-reviews.git'
+gem 'spree_reviews', :git => 'git://github.com/MaslovAnton/spree-reviews.git'
 gem 'spree_compare_products', :git => 'git://github.com/romul/spree_compare_products.git'
+gem 'contact_us', :git => 'git://github.com/MaslovAnton/spree_contact_us.git'
+gem 'recaptcha'
+gem 'formtastic'
+gem 'dynamic_form'
 
 # Use unicorn as the web server
 # gem 'unicorn'

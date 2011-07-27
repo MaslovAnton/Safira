@@ -1,9 +1,19 @@
 GIT
-  remote: git://github.com/romul/spree-reviews.git
-  revision: 5b18869613c58298fb38d7ff9d2b3169b38f5695
+  remote: git://github.com/MaslovAnton/spree-reviews.git
+  revision: 6cab323e52f0e8adc50e63eb0696fec23b597b46
   specs:
     spree_reviews (0.50.1)
       spree_core (>= 0.50.0)
+
+GIT
+  remote: git://github.com/MaslovAnton/spree_contact_us.git
+  revision: 858ae7f9ce67c73217ebce15be8db4031d864e65
+  specs:
+    contact_us (2.0.0)
+      dynamic_form
+      formtastic
+      recaptcha
+      spree_core
 
 GIT
   remote: git://github.com/romul/spree_compare_products.git
@@ -115,6 +125,7 @@ GEM
       bcrypt-ruby (~> 2.1.2)
       orm_adapter (~> 0.0.3)
       warden (~> 1.0.3)
+    dynamic_form (1.1.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     faker (0.9.5)
@@ -157,7 +168,7 @@ GEM
     paperclip (2.3.11)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
-    polyglot (0.3.1)
+    polyglot (0.3.2)
     rack (1.2.3)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
@@ -185,6 +196,7 @@ GEM
     rd_resource_controller (1.0.1)
     rd_unobtrusive_date_picker (0.1.0)
     rdoc (3.8)
+    recaptcha (0.3.1)
     spree_address_book (0.50.2)
       spree_auth (>= 0.50.0)
       spree_core (>= 0.50.0)
@@ -221,14 +233,15 @@ GEM
       synergy
     synergy_russian (0.2.8)
     thor (0.14.6)
-    treetop (1.4.9)
+    treetop (1.4.10)
+      polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.29)
     unicorn (4.0.1)
       kgio (~> 2.4)
       rack
       raindrops (~> 0.6)
-    warden (1.0.4)
+    warden (1.0.5)
       rack (>= 1.0)
     will_paginate (3.0.pre2)
 
@@ -237,8 +250,12 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano-deploy (~> 0.1.1)
+  contact_us!
+  dynamic_form
+  formtastic
   mysql2 (~> 0.2.7)
   rails (= 3.0.9)
+  recaptcha
   spree!
   spree_compare_products!
   spree_i18n!
