@@ -16,6 +16,13 @@ GIT
       spree_core
 
 GIT
+  remote: git://github.com/MaslovAnton/spree_variant_options.git
+  revision: f73d401bd3bdd279bb38805e5214dd99b7df9aa8
+  specs:
+    spree_variant_options (0.1.1)
+      spree_core (>= 0.30.1)
+
+GIT
   remote: git://github.com/romul/spree_compare_products.git
   revision: 2ad17e813790cdd6b9aef567e3e8cee3d523b23d
   specs:
@@ -260,6 +267,7 @@ DEPENDENCIES
   spree_compare_products!
   spree_i18n!
   spree_reviews!
+  spree_variant_options!
   synergy (~> 0.60.0)
   synergy_default_theme (= 1.0.2)
   unicorn (~> 4.0.1)
