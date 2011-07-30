@@ -16,6 +16,8 @@ gem 'contact_us', :git => 'git://github.com/MaslovAnton/spree_contact_us.git'
 gem 'recaptcha'
 gem 'formtastic'
 gem 'dynamic_form'
+gem 'spree_recently_viewed', :git => 'git://github.com/MaslovAnton/spree-recently-viewed.git'
+gem 'spree_variant_options', :git => 'git://github.com/MaslovAnton/spree_variant_options.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'
