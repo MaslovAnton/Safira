@@ -1,14 +1,12 @@
-$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
-require "rvm/capistrano"                  # Load RVM's capistrano plugin.
-set :rvm_ruby_string, 'ruby-1.9.2-p290'        # Or whatever env you want it to run in.
-set :rvm_type, :user
+$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Для работы rvm
+#require 'rvm/capistrano' # Для работы rvm
 
 set :default_environment, {
-  'PATH' => "/path/to/.rvm/gems/ruby-1.9.2-p290/bin:/path/to/.rvm/bin:/path/to/.rvm/ruby-1.9.2-p290/bin:$PATH",
+  'PATH' => "/home/hosting_maslov/.rvm/gems/ruby-1.9.2-p290/bin:/home/hosting_maslov/.rvm/bin:/home/hosting_maslov/.rvm/ree-1.8.7-2009.10/bin:$PATH",
   'RUBY_VERSION' => 'ruby 1.8.7',
-  'GEM_HOME'     => '/path/to/.rvm/gems/ruby-1.9.2-p290',
-  'GEM_PATH'     => '/path/to/.rvm/gems/ruby-1.9.2-p290',
-  'BUNDLE_PATH'  => '/path/to/.rvm/gems/ruby-1.9.2-p290'  # If you are using bundler.
+  'GEM_HOME'     => '/home/hosting_maslov/.rvm/gems/ruby-1.9.2-p290',
+  'GEM_PATH'     => '/home/hosting_maslov/.rvm/gems/ruby-1.9.2-p290',
+  'BUNDLE_PATH'  => '/home/hosting_maslov/.rvm/gems/ruby-1.9.2-p290'  # If you are using bundler.
 }
 
 # _your_login_ - Поменять на ваш логин в панели управления
@@ -17,13 +15,10 @@ set :default_environment, {
 # set :repository - Установить расположение вашего репозитория
 # У вас должна быть настроена авторизация ssh по сертификатам
 
-set :application, "Safira"
-set :repository,  "ssh://git@github.com:MaslovAnton/Safira.git"
+set :application, "safira"
+set :repository,  "git@github.com:MaslovAnton/Safira.git"
 
 dpath = "/home/hosting_maslov/projects/safira7"
-
-set :scm_username, "MaslovAnton"
-
 
 set :user, "hosting_maslov"
 set :use_sudo, false

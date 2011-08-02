@@ -17,7 +17,7 @@ gem 'recaptcha'
 gem 'formtastic'
 gem 'dynamic_form'
 
-gem 'spree_variant_options', :git => 'git://github.com/MaslovAnton/spree_variant_options.git'
+gem 'spree_variant_options', :git => 'git://github.com/MaslovAnton/spree_variant_options.git', :branch => 'master'
 gem 'spree_recently_viewed', :git => 'git://github.com/MaslovAnton/spree-recently-viewed.git'
 
 

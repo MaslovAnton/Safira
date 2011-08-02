@@ -24,11 +24,7 @@ GIT
 
 GIT
   remote: git://github.com/MaslovAnton/spree_variant_options.git
-<<<<<<< HEAD
-  revision: f73d401bd3bdd279bb38805e5214dd99b7df9aa8
-=======
   revision: 9d38679c0af9cd482b1e71dd5829653563ccf2de
->>>>>>> recently-viewed
   specs:
     spree_variant_options (0.1.1)
       spree_core (>= 0.30.1)
