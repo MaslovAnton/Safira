@@ -1,3 +1,4 @@
+
 Safira::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -47,3 +48,4 @@ Safira::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 end
+
