@@ -19,7 +19,7 @@ gem 'dynamic_form'
 
 gem 'spree_variant_options', :git => 'git://github.com/MaslovAnton/spree_variant_options.git', :branch => 'master'
 gem 'spree_recently_viewed', :git => 'git://github.com/MaslovAnton/spree-recently-viewed.git'
-
+gem 'spree_social', :git => 'git://github.com/MaslovAnton/spree_social.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'
