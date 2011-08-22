@@ -495,6 +495,13 @@ ActiveRecord::Schema.define(:version => 20110701112239) do
   add_index "roles_users", ["role_id"], :name => "index_roles_users_on_role_id"
   add_index "roles_users", ["user_id"], :name => "index_roles_users_on_user_id"
 
+  create_table "share_methods", :force => true do |t|
+    t.string   "environment"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "shipments", :force => true do |t|
     t.integer  "order_id"
     t.integer  "shipping_method_id"
