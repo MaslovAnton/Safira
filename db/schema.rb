@@ -82,6 +82,28 @@ ActiveRecord::Schema.define(:version => 20110701112239) do
     t.datetime "updated_at"
   end
 
+  create_table "comment_types", :force => true do |t|
+    t.string   "name"
+    t.string   "applies_to"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "title",            :limit => 50, :default => ""
+    t.text     "comment"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "comment_type_id"
+  end
+
+  add_index "comments", ["commentable_id"], :name => "index_comments_on_commentable_id"
+  add_index "comments", ["commentable_type"], :name => "index_comments_on_commentable_type"
+  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
+
   create_table "configurations", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -341,6 +363,15 @@ ActiveRecord::Schema.define(:version => 20110701112239) do
   create_table "product_groups_products", :id => false, :force => true do |t|
     t.integer "product_id"
     t.integer "product_group_id"
+  end
+
+  create_table "product_imports", :force => true do |t|
+    t.string   "data_file_file_name"
+    t.string   "data_file_content_type"
+    t.integer  "data_file_file_size"
+    t.datetime "data_file_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "product_option_types", :force => true do |t|

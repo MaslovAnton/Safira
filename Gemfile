@@ -21,6 +21,9 @@ gem 'spree_variant_options', :git => 'git://github.com/MaslovAnton/spree_variant
 gem 'spree_recently_viewed', :git => 'git://github.com/MaslovAnton/spree-recently-viewed.git'
 gem 'spree_social', :git => 'git://github.com/MaslovAnton/spree_social.git'
 gem 'spree_share', :git => 'git://github.com/spree/spree_share.git'
+gem 'hosted_gateway', :git => 'git://github.com/MaslovAnton/spree-hosted-gateway.git'
+gem 'spree_email_to_friend', :path => 'vendor/bundle/spree_email_to_friend'
+#:git => 'git://github.com/spree/spree_email_to_friend.git'
 # Use unicorn as the web server
 # gem 'unicorn'
 

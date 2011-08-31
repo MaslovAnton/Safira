@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/MaslovAnton/spree-hosted-gateway.git
+  revision: aca10a2e07209d060f24c19cf25f80e7cafc3a37
+  specs:
+    hosted_gateway (1.0.0)
+      spree_core (>= 0.30.1)
+
+GIT
   remote: git://github.com/MaslovAnton/spree-recently-viewed.git
   revision: 5a66ca6fdd2f2b8048a9ed20532df2d2968f6cbe
   specs:
@@ -112,6 +119,14 @@ GIT
       spree_auth (>= 0.40.99)
       spree_core (>= 0.40.99)
       spree_social (>= 0.40.99)
+
+PATH
+  remote: vendor/bundle/spree_email_to_friend
+  specs:
+    spree_email_to_friend (1.0.0)
+      recaptcha (>= 0.3.1)
+      spree_auth (>= 0.30.1)
+      spree_core (>= 0.30.1)
 
 GEM
   remote: http://rubygems.org/
@@ -317,11 +332,13 @@ DEPENDENCIES
   contact_us!
   dynamic_form
   formtastic
+  hosted_gateway!
   mysql2 (~> 0.2.7)
   rails (= 3.0.9)
   recaptcha
   spree!
   spree_compare_products!
+  spree_email_to_friend!
   spree_i18n!
   spree_recently_viewed!
   spree_reviews!
