@@ -579,6 +579,15 @@ ActiveRecord::Schema.define(:version => 20110701112239) do
     t.integer "country_id"
   end
 
+  create_table "store_credits", :force => true do |t|
+    t.integer  "user_id"
+    t.decimal  "amount",           :precision => 8, :scale => 2, :default => 0.0, :null => false
+    t.decimal  "remaining_amount", :precision => 8, :scale => 2, :default => 0.0, :null => false
+    t.string   "reason"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tax_categories", :force => true do |t|
     t.string   "name"
     t.string   "description"

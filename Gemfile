@@ -23,7 +23,9 @@ gem 'spree_social', :git => 'git://github.com/MaslovAnton/spree_social.git'
 gem 'spree_share', :git => 'git://github.com/spree/spree_share.git'
 gem 'hosted_gateway', :git => 'git://github.com/MaslovAnton/spree-hosted-gateway.git'
 gem 'spree_email_to_friend', :path => 'vendor/bundle/spree_email_to_friend'
+#gem 'spree_wishlist', :git => 'git://github.com/greendog/spree_wishlist.git'
 gem 'spree_wishlist', :path => 'vendor/bundle/spree_wishlist'
+gem 'spree_store_credits', :git => 'git://github.com/pdamer/spree_store_credits.git', :branch => '0-60-x'
 
 # Use unicorn as the web server
 # gem 'unicorn'
