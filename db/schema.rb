@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110701112239) do
+ActiveRecord::Schema.define(:version => 20110906194311) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -49,6 +49,24 @@ ActiveRecord::Schema.define(:version => 20110701112239) do
   end
 
   add_index "adjustments", ["order_id"], :name => "index_adjustments_on_order_id"
+
+  create_table "affiliate_events", :force => true do |t|
+    t.string   "name"
+    t.integer  "reward_id"
+    t.string   "reward_type"
+    t.integer  "affiliate_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "affiliates", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "partner_id"
+    t.string   "affiliate_email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "assets", :force => true do |t|
     t.integer  "viewable_id"
@@ -153,6 +171,19 @@ ActiveRecord::Schema.define(:version => 20110701112239) do
     t.integer  "address_id"
     t.string   "gateway_customer_profile_id"
     t.string   "gateway_payment_profile_id"
+  end
+
+  create_table "delayed_jobs", :force => true do |t|
+    t.integer  "priority",   :default => 0
+    t.integer  "attempts",   :default => 0
+    t.text     "handler"
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.text     "locked_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "feedback_reviews", :force => true do |t|
@@ -402,7 +433,7 @@ ActiveRecord::Schema.define(:version => 20110701112239) do
   add_index "product_scopes", ["product_group_id"], :name => "index_product_scopes_on_product_group_id"
 
   create_table "products", :force => true do |t|
-    t.string   "name",                                                  :default => "",   :null => false
+    t.string   "name",                                                  :default => "",    :null => false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -413,10 +444,12 @@ ActiveRecord::Schema.define(:version => 20110701112239) do
     t.datetime "deleted_at"
     t.string   "meta_description"
     t.string   "meta_keywords"
-    t.integer  "count_on_hand",                                         :default => 0,    :null => false
-    t.boolean  "export_to_yandex_market",                               :default => true, :null => false
-    t.decimal  "avg_rating",              :precision => 7, :scale => 5, :default => 0.0,  :null => false
-    t.integer  "reviews_count",                                         :default => 0,    :null => false
+    t.integer  "count_on_hand",                                         :default => 0,     :null => false
+    t.boolean  "export_to_yandex_market",                               :default => true,  :null => false
+    t.decimal  "avg_rating",              :precision => 7, :scale => 5, :default => 0.0,   :null => false
+    t.integer  "reviews_count",                                         :default => 0,     :null => false
+    t.boolean  "special_offer",                                         :default => false
+    t.integer  "vendor_id"
   end
 
   add_index "products", ["available_on"], :name => "index_products_on_available_on"
@@ -491,6 +524,25 @@ ActiveRecord::Schema.define(:version => 20110701112239) do
     t.datetime "updated_at"
   end
 
+  create_table "relation_types", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "applies_to"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "relations", :force => true do |t|
+    t.integer  "relation_type_id"
+    t.integer  "relatable_id"
+    t.string   "relatable_type"
+    t.integer  "related_to_id"
+    t.string   "related_to_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.decimal  "discount_amount",  :precision => 8, :scale => 2, :default => 0.0
+  end
+
   create_table "return_authorizations", :force => true do |t|
     t.string   "number"
     t.decimal  "amount",     :precision => 8, :scale => 2, :default => 0.0, :null => false
@@ -544,6 +596,7 @@ ActiveRecord::Schema.define(:version => 20110701112239) do
     t.datetime "shipped_at"
     t.integer  "address_id"
     t.string   "state"
+    t.integer  "vendor_id"
   end
 
   add_index "shipments", ["number"], :name => "index_shipments_on_number"
@@ -716,6 +769,12 @@ ActiveRecord::Schema.define(:version => 20110701112239) do
   end
 
   add_index "variants", ["product_id"], :name => "index_variants_on_product_id"
+
+  create_table "vendors", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "wished_products", :force => true do |t|
     t.integer  "variant_id"

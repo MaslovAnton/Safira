@@ -1,0 +1,7 @@
+public/assets
+solr/
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+
