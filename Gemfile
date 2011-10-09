@@ -29,7 +29,7 @@ gem 'spree_wishlist', :path => 'vendor/bundle/spree_wishlist'
 gem 'spree_store_credits', :git => 'git://github.com/pdamer/spree_store_credits.git', :branch => '0-60-x'
 gem 'spree_related_products', :path => 'vendor/bundle/spree_related_products'
 gem 'spree_vendors', :path => 'vendor/bundle/spree_vendors'
-gem 'spree_free_shipping', :git => 'git://github.com/DynamoMTL/spree_free_shipping.git'
+gem 'spree_free_shipping', :git => 'git://github.com/MaslovAnton/spree_free_shipping.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'

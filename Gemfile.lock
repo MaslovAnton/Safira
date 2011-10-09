@@ -30,6 +30,13 @@ GIT
       spree_core
 
 GIT
+  remote: git://github.com/MaslovAnton/spree_free_shipping.git
+  revision: b379c2ee87ed84871089c76fc0ec3154d8ec9490
+  specs:
+    spree_free_shipping (0.60.2)
+      spree_core (>= 0.50.1)
+
+GIT
   remote: git://github.com/MaslovAnton/spree_social.git
   revision: acb5b56d17c456463be04a47f69cb5b34f46ed21
   specs:
@@ -361,6 +368,7 @@ DEPENDENCIES
   spree!
   spree_compare_products!
   spree_email_to_friend!
+  spree_free_shipping!
   spree_i18n!
   spree_recently_viewed!
   spree_related_products!
