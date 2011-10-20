@@ -312,7 +312,7 @@ body.two-col #content {
 #header a { color: #2e6ab1; }
 #header a:hover { color: #eeeeee; }
 #footer {
-  padding-top: 2em;
+/*  padding-top: 2em;*/
   clear: both;
 }
 #footer div.left { width: 37%; }
@@ -914,3 +914,62 @@ div#checkout #checkout-summary {
   padding: 20px;
   width: 180px;
 }
+
+/*Footer*/
+
+#footer #contact-us, footer #social {
+  font-family: Trebuchet MS;
+  width: 210px;
+  position: absolute;
+
+}
+#footer #contact-us a, #footer #social a  { color: #7d683b; }
+#footer #contact-us p, #footer #social p {
+  color: #7d683b;
+ /* line-height: 2.0em; */
+  font-size: 1.4em;
+  margin-bottom: 0;
+}
+#footer #contact-us h3, #footer #social h3 {
+  font-family: Tahoma;
+  color: #5E4515;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+
+
+#footer #contact-us {
+  margin-left: 50px;
+  text-align: left;
+  margin-top: 40px;
+}
+#footer #social {
+  padding-top: 40px;
+  text-align: left;
+  margin-left: 300px;
+}
+
+#footer #social a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-image: url(../images/social/social_icons.png);
+}
+
+#footer #social a span { display: none; }
+#footer #social #vk { background-position: -32px 0 }
+#footer #social #odno { background-position: -64px 0 }
+#footer #social #twitter { background-position: -96px 0 }
+#footer #social #blog { background-position: -128px 0 }
+#footer #social #jj { background-position: -160px 0 }
+
+#footer #copyright {
+  text-align: right;
+  color: #938051;
+  margin: 80px 20px 0px 0px;
+}
+

@@ -265,9 +265,9 @@ ul.sidebar_menu li a:hover {
   clear: both;
 }
 
-.footer {
+#footer {
   margin-top: -124px;
-  height: 124px;
+  height: 170px;
   clear: both;
   width: 1048px;
   margin-left: auto;
@@ -288,7 +288,8 @@ ul.footer_menu li {
 }
 
 ul.footer_menu li a {
-  color: white;
+  font-size: 14pt;
+  color: #7d683b;
 }
 
 ul.nav-list {

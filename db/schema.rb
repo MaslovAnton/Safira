@@ -632,6 +632,15 @@ ActiveRecord::Schema.define(:version => 20110906194311) do
     t.integer "country_id"
   end
 
+  create_table "stock_requests", :force => true do |t|
+    t.string   "email"
+    t.integer  "product_id"
+    t.integer  "variant_id"
+    t.string   "status",     :default => "new"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "store_credits", :force => true do |t|
     t.integer  "user_id"
     t.decimal  "amount",           :precision => 8, :scale => 2, :default => 0.0, :null => false
