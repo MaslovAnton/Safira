@@ -1,0 +1,17 @@
+<%= mail.recipient_name %>,
+
+Думаю тебя это заинтересует
+
+  * <%= product.name %>
+
+<% unless mail.message.blank? -%>
+<%= mail.message %>
+<% end -%>
+
+<%= mail.sender_name %>
+
+Ссылка посмотреть страничку <%= product.name %> товара.
+<%= product_url(product) %>
+
+Для большей информации по онлайн шопингу, посетите <%= products_url %>
+

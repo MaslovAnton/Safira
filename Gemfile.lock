@@ -127,7 +127,7 @@ GIT
       spree_core (>= 0.30.0)
 
 PATH
-  remote: vendor/bundle/spree_email_to_friend
+  remote: vendor/spree_email_to_friend
   specs:
     spree_email_to_friend (1.0.0)
       recaptcha (>= 0.3.1)
@@ -135,20 +135,20 @@ PATH
       spree_core (>= 0.30.1)
 
 PATH
-  remote: vendor/bundle/spree_related_products
+  remote: vendor/spree_related_products
   specs:
     spree_related_products (3.1)
       spree_core (>= 0.30.0)
 
 PATH
-  remote: vendor/bundle/spree_vendors
+  remote: vendor/spree_vendors
   specs:
     spree_vendors (1.0.0)
       haml
       spree_core (>= 0.40.3)
 
 PATH
-  remote: vendor/bundle/spree_wishlist
+  remote: vendor/spree_wishlist
   specs:
     spree_wishlist (1.1)
       spree_auth (>= 0.30.0)
