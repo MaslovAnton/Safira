@@ -48,6 +48,7 @@ module Synergy
         Spree::Config.set(:store_phone => '+7 (917) 6289003') unless Spree::Config[:store_phone]
         # store address
         #Spree::Config.set(:store_address => 'Somewhere st. Nowhere')
+        Spree::Config.set :cookie_name => "app_referrerid"
       end
 
       ::ADDRESS_FIELDS.clear << ["lastname", "firstname", "secondname", "country", "state", "city", "zipcode", "address1", "phone"]

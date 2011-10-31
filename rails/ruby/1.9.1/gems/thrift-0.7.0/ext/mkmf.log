@@ -1,0 +1,43 @@
+have_func: checking for strlcpy() in string.h... -------------------- no
+
+"gcc -o conftest -I/home/antonio/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/i686-linux -I/home/antonio/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/home/antonio/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I.  -D_FILE_OFFSET_BITS=64  -g -O2 -Wall -Werror conftest.c  -L. -L/home/antonio/.rvm/rubies/ruby-1.9.2-head/lib -Wl,-R/home/antonio/.rvm/rubies/ruby-1.9.2-head/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/antonio/.rvm/rubies/ruby-1.9.2-head/lib -L/home/antonio/.rvm/rubies/ruby-1.9.2-head/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/home/antonio/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/i686-linux -I/home/antonio/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/home/antonio/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I.  -D_FILE_OFFSET_BITS=64  -g -O2 -Wall -Werror conftest.c  -L. -L/home/antonio/.rvm/rubies/ruby-1.9.2-head/lib -Wl,-R/home/antonio/.rvm/rubies/ruby-1.9.2-head/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/antonio/.rvm/rubies/ruby-1.9.2-head/lib -L/home/antonio/.rvm/rubies/ruby-1.9.2-head/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: В функции «t»:
+conftest.c:7:28: ошибка: variable «p» set but not used [-Werror=unused-but-set-variable]
+cc1: все предупреждения считать ошибками
+
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <string.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))strlcpy; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/antonio/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/i686-linux -I/home/antonio/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/home/antonio/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I.  -D_FILE_OFFSET_BITS=64  -g -O2 -Wall -Werror conftest.c  -L. -L/home/antonio/.rvm/rubies/ruby-1.9.2-head/lib -Wl,-R/home/antonio/.rvm/rubies/ruby-1.9.2-head/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/antonio/.rvm/rubies/ruby-1.9.2-head/lib -L/home/antonio/.rvm/rubies/ruby-1.9.2-head/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: В функции «t»:
+conftest.c:7:1: ошибка: слишком мало аргументов в вызове функции «strlcpy»
+/home/antonio/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/missing.h:157:20: замечание: declared here
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <string.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { strlcpy(); return 0; }
+/* end */
+
+--------------------
+

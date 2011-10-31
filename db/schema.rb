@@ -50,12 +50,41 @@ ActiveRecord::Schema.define(:version => 20110906194311) do
 
   add_index "adjustments", ["order_id"], :name => "index_adjustments_on_order_id"
 
+  create_table "affiliate_credits", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "status"
+    t.string   "comment"
+    t.integer  "affiliate_payment_id"
+    t.decimal  "amount",               :precision => 8, :scale => 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "affiliate_earnings", :force => true do |t|
+    t.integer  "order_id"
+    t.integer  "user_id"
+    t.string   "status"
+    t.integer  "affiliate_payment_id"
+    t.decimal  "amount",               :precision => 8,  :scale => 2
+    t.decimal  "percentage",           :precision => 10, :scale => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "affiliate_events", :force => true do |t|
     t.string   "name"
     t.integer  "reward_id"
     t.string   "reward_type"
     t.integer  "affiliate_id"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "affiliate_payments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "affiliate_user_id"
+    t.decimal  "amount",            :precision => 8, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -758,6 +787,9 @@ ActiveRecord::Schema.define(:version => 20110906194311) do
     t.datetime "locked_at"
     t.datetime "remember_created_at"
     t.integer  "user_group_id"
+    t.string   "website"
+    t.string   "full_name"
+    t.string   "phone"
   end
 
   add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token"
