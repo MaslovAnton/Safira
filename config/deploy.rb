@@ -29,7 +29,16 @@ after 'deploy:update_code', :roles => :app do
   # Здесь для примера вставлен только один конфиг с приватными данными - database.yml. Обычно для таких вещей создают папку /srv/myapp/shared/config и кладут файлы туда. При каждом деплое создаются ссылки на них в нужные места приложения.
   run "rm -f #{current_release}/config/database.yml"
   run "ln -s #{deploy_to}/shared/config/database.yml #{current_release}/config/database.yml"
+  run "rm -r #{current_release}/public/assets"
+  run "ln -s #{deploy_to}/shared/assets #{current_release}/public/assets"
+
 end
+
+#desc "Symlink Assets/Uploads"
+# task :symlink_assets, :roles => :app do
+#   run "rm -r #{current_release}/public/assets"
+#   run "ln -s #{deploy_to}/assets #{current_release}/public/assets"
+# end
 
 # Далее идут правила для перезапуска unicorn. Их стоит просто принять на веру - они работают.
 namespace :deploy do
@@ -37,18 +46,13 @@ namespace :deploy do
     run "if [ -f #{unicorn_pid} ]; then kill -USR2 `cat #{unicorn_pid}`; else cd #{deploy_to}/current && bundle exec unicorn_rails -c #{unicorn_conf} -E #{rails_env} -D; fi"
   end
   task :start do
-    run "bundle exec unicorn_rails -c #{unicorn_conf} -E #{rails_env} -D"
+    run "cd #{deploy_to}/current ; bundle exec unicorn_rails -c #{unicorn_conf} -E #{rails_env} -D"
   end
   task :stop do
     run "if [ -f #{unicorn_pid} ]; then kill -QUIT `cat #{unicorn_pid}`; fi"
   end
 end
 
-desc "Symlink Assets/Uploads"
- task :symlink_assets, :roles => :app do
-   run "rm -r #{release_path}/public/assets"
-   run "ln -s #{shared_path}/assets #{release_path}/public/assets"
- end  
 
 #set :default_environment, {
 # 'PATH' => "/path/to/.rvm/gems/ruby-1.9.2-p290/bin:/path/to/.rvm/bin:/path/to/.rvm/ruby-1.9.2-p290/bin:$PATH",
@@ -57,8 +61,3 @@ desc "Symlink Assets/Uploads"
 #  'GEM_PATH'     => '/path/to/.rvm/gems/ruby-1.9.2-p290',
 # 'BUNDLE_PATH'  => '/path/to/.rvm/gems/ruby-1.9.2-p290'  # If you are using bundler.
 #}
-
-#кole :web, "lithium.locum.ru"                          # Your HTTP server, Apache/etc
-#role :app, "lithium.locum.ru"                          # This may be the same as your `Web` server
-#role :db,  "lithium.locum.ru", :primary => true # This is where Rails migrations will run
-

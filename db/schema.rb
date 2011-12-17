@@ -479,6 +479,8 @@ ActiveRecord::Schema.define(:version => 20110906194311) do
     t.integer  "reviews_count",                                         :default => 0,     :null => false
     t.boolean  "special_offer",                                         :default => false
     t.integer  "vendor_id"
+    t.string   "product_vendor_url"
+    t.string   "product_vendor_url_2"
   end
 
   add_index "products", ["available_on"], :name => "index_products_on_available_on"

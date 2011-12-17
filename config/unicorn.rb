@@ -8,14 +8,16 @@ old_pid    = pid_file + '.oldbin'
 
 timeout 30
 worker_processes 4 # Здесь тоже в зависимости от нагрузки, погодных условий и текущей фазы луны
-listen socket_file, :backlog => 1024
+listen socket_file, :backlog => 2048
 pid pid_file
 stderr_path err_log
 stdout_path log_file
 
 preload_app true # Мастер процесс загружает приложение, перед тем, как плодить рабочие процессы.
 
-GC.copy_on_write_friendly = true if GC.respond_to?(:copy_on_write_friendly=) # Решительно не уверен, что значит эта строка, но я решил ее оставить.
+if GC.respond_to?(:copy_on_write_friendly=)
+  GC.copy_on_write_friendly = true
+end         # Решительно не уверен, что значит эта строка, но я решил ее оставить.
 
 before_exec do |server|
  ENV["BUNDLE_GEMFILE"] = "#{rails_root}/Gemfile"
@@ -41,4 +43,3 @@ after_fork do |server, worker|
   defined?(ActiveRecord::Base) and
   ActiveRecord::Base.establish_connection
 end
-
