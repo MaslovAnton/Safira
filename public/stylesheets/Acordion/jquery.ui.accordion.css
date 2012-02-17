@@ -16,13 +16,21 @@ border-bottom: 1px solid #D3D3D3;
 }
 .ui-accordion .ui-accordion-li-fix { display: inline; }
 .ui-accordion .ui-accordion-header-active { border-bottom: 0 !important; }
-.ui-accordion .ui-accordion-header a { display: block; font: 1.4em Tahoma; padding: .5em .5em .5em .7em; }
+.ui-accordion .ui-accordion-header a {
+display: block;
+font: 14px Cuprum; padding: .5em .5em .5em .7em;
+text-transform: uppercase;
+    /*font-weight: bold;*/
+
+}
 .ui-accordion-icons .ui-accordion-header a { padding-left: 2.2em; }
 .ui-accordion .ui-accordion-header .ui-icon { position: absolute; left: .5em; top: 50%; margin-top: -8px; }
-.ui-accordion .ui-accordion-content { padding: 1em 2.2em; border-top: 0; margin-top: -2px; position: relative; top: 1px; margin-bottom: 2px; overflow: auto; display: none; zoom: 1; }
+.ui-accordion .ui-accordion-content {
+/*padding: 1em 2.2em; */
+padding: 0.5em 2em;
+border-top: 0; margin-top: -2px; position: relative; top: 1px; margin-bottom: 2px; overflow: auto; display: none; zoom: 1; }
 .ui-accordion .ui-accordion-content-active { display: block; }
 .sidebar ul li a {
-    font-size: 14px;
-font-family: Tahoma;
+    font-size: 13px;
+    font-family: Ubuntu;
 }
-

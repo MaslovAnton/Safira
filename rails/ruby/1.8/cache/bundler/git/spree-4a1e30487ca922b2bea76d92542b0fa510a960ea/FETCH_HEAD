@@ -2,15 +2,15 @@ e8c7ce4a98e2e9208ab6e870304f842c8bd61024		branch '0-11-stable' of git://github.c
 078bf58c7d42b8d74c090aa4b6cc3060ea3baf3b		branch '0-30-stable' of git://github.com/spree/spree
 30c3e56df3b496414e8e30d94cc9275f359451bb		branch '0-40-stable' of git://github.com/spree/spree
 b9eef4d75c693bc0169a9214f39f083487b3ef26		branch '0-50-stable' of git://github.com/spree/spree
-e243894b9871d8515133f0d2fe6510086de68b09		branch '0-60-stable' of git://github.com/spree/spree
-9cc57c5fbe62f026543b5eb864d3893322edcc4c		branch '0-70-stable' of git://github.com/spree/spree
+2edbbff6c13247f2172ecf82c32bf6d2659fca99		branch '0-60-stable' of git://github.com/spree/spree
+efce6151ce4fc2e79c507bd7f0d51aa22dc34173		branch '0-70-stable' of git://github.com/spree/spree
+bcd9a93b8218556e5d7ce020e981d4b58752f60c		branch '1-0-stable' of git://github.com/spree/spree
 ae83951ab888cea00ded0baca789cf08dd25aeee		branch '444-fix-permalinks' of git://github.com/spree/spree
 23086b7c74232b61a01abd4b596b82e17a8d510e		branch '767-price-rounding-fixes' of git://github.com/spree/spree
 c33e14c86cb8c2606664c6b40a3a3b1ca9694497		branch '783-admin-order-validation-error' of git://github.com/spree/spree
 eb75e582c793e0de44f639cf2f9695c7ca9e1800		branch 'create-line-items-promo-action' of git://github.com/spree/spree
-6c8543f56314ca4d19dbea405f2d7779ad5881ad		branch 'master' of git://github.com/spree/spree
-a16a33afe22bfcba61ea744a799b15a70624e129		branch 'namespace' of git://github.com/spree/spree
-d18c17b7e99927b6fad68401a57f1a52cfa23de5		branch 'tax_refactor' of git://github.com/spree/spree
+f2629789f843acec4099bf2a3c86b36390ebc221		branch 'master' of git://github.com/spree/spree
+e02214157cdcac98430329a492632e5e1983314e		branch 'v1.0.0.rc3' of git://github.com/spree/spree
 813cb739f63ace32286ced7337ccc72487fd6e1e	not-for-merge	tag 'v0.10.0' of git://github.com/spree/spree
 11e067a29ad5b5b8e1da31f1aca2f1ad6ff32f27	not-for-merge	tag 'v0.10.0.beta' of git://github.com/spree/spree
 584b473ede2c6aedbb8733e5ba98ff470a93c9b6	not-for-merge	tag 'v0.10.1' of git://github.com/spree/spree
@@ -64,4 +64,8 @@ e5ab6a44140881a54bcc01feab7c0a998157f6fb	not-for-merge	tag 'v0.9.1' of git://git
 d8978cab663620a6bc7d830d078ea3497d1671d8	not-for-merge	tag 'v0.9.2' of git://github.com/spree/spree
 46ee37f315da0a5ea584b558ae36dc0c580a601a	not-for-merge	tag 'v0.9.3' of git://github.com/spree/spree
 58a58c8933b787673807e109b71598c701ed2da0	not-for-merge	tag 'v0.9.4' of git://github.com/spree/spree
-53e2cefe2cd529396cfaf5f1cac49e5ec2fe34b2	not-for-merge	tag 'vpre_meta_search' of git://github.com/spree/spree
+cf1bd44ec6706ae2ce420b05c847a50af3f4f18f	not-for-merge	tag 'v1.0.0' of git://github.com/spree/spree
+ab1d9b499293c2ea3900624308814e9432be8593	not-for-merge	tag 'v1.0.0.rc1' of git://github.com/spree/spree
+d64761981b44743a03ef37853d57a3568d4261c7	not-for-merge	tag 'v1.0.0.rc2' of git://github.com/spree/spree
+d591ac27e5ab2e66a4bcd99b06c4b4468851d224	not-for-merge	tag 'v1.0.0.rc3' of git://github.com/spree/spree
+8cec6ee771efd324f1067f2426b941bd883f5e7a	not-for-merge	tag 'v1.0.0.rc4' of git://github.com/spree/spree

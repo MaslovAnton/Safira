@@ -24,12 +24,12 @@ gem 'spree_reviews', :git => 'git://github.com/MaslovAnton/spree-reviews.git'
 gem 'spree_compare_products', :git => 'git://github.com/romul/spree_compare_products.git'
 gem 'contact_us', :git => 'git://github.com/MaslovAnton/spree_contact_us.git'
 
-gem 'spree_variant_options', :git => 'git://github.com/MaslovAnton/spree_variant_options.git', :branch => 'master'
+gem 'spree_variant_options', :git => 'git://github.com/MaslovAnton/spree_variant_options.git', :branch => 'masteer'
 gem 'spree_recently_viewed', :git => 'git://github.com/MaslovAnton/spree-recently-viewed.git'
 gem 'spree_social', :git => 'git://github.com/MaslovAnton/spree_social.git'
 #gem 'spree_share', :git => 'git://github.com/spree/spree_share.git'
 gem 'hosted_gateway', :git => 'git://github.com/MaslovAnton/spree-hosted-gateway.git'
-gem 'spree_email_to_friend', :path => 'vendor/bundle/spree_email_to_friend'
+#gem 'spree_email_to_friend', :path => 'vendor/bundle/spree_email_to_friend'
 gem 'spree_wishlist', :git => 'git://github.com/MaslovAnton/spree_wishlist.git'
 #gem 'spree_wishlist', :path => 'vendor/bundle/spree_wishlist'
 gem 'spree_store_credits', :git => 'git://github.com/pdamer/spree_store_credits.git', :branch => '0-60-x'
@@ -38,7 +38,7 @@ gem 'spree_related_products', :git => 'git://github.com/MaslovAnton/spree_relate
 gem 'spree_vendors', :git =>  'git://github.com/MaslovAnton/spree-vendors.git'
 gem 'spree_free_shipping', :git => 'git://github.com/MaslovAnton/spree_free_shipping.git'
 #gem 'spree_affiliate_sm', :git => 'git://github.com/printbear/spree-affiliate-sm.git'
-gem 'spree_affiliate', :git => 'git://github.com/MaslovAnton/spree_affiliate.git'
+#gem 'spree_affiliate', :git => 'git://github.com/MaslovAnton/spree_affiliate.git'
 
 
 group :production do

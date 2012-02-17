@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/MaslovAnton/spree-recently-viewed.git
-  revision: 5a66ca6fdd2f2b8048a9ed20532df2d2968f6cbe
+  revision: 755c8376238b42ad5bcbddca68d5d7fd11c8c343
   specs:
     spree_recently_viewed (1.0.0)
       spree_core (>= 0.40.0)
@@ -26,16 +26,6 @@ GIT
     spree_vendors (1.0.0)
       haml
       spree_core (>= 0.40.3)
-
-GIT
-  remote: git://github.com/MaslovAnton/spree_affiliate.git
-  revision: 5eea768f6304124d3eaed0999520f15e3bff0e11
-  specs:
-    spree_affiliate (1.0.0)
-      spree_auth (>= 0.40.0)
-      spree_core (>= 0.40.0)
-      spree_email_to_friend (>= 1.0.0)
-      spree_store_credits (>= 1.0.0)
 
 GIT
   remote: git://github.com/MaslovAnton/spree_contact_us.git
@@ -73,10 +63,10 @@ GIT
 
 GIT
   remote: git://github.com/MaslovAnton/spree_variant_options.git
-  revision: fe7396986655123304dbe4c8f34a685ed332b8fe
-  branch: master
+  revision: 6dbaffe93f0c978c2480f06311a83f49271248c5
+  branch: masteer
   specs:
-    spree_variant_options (0.2.0)
+    spree_variant_options (0.1.1)
       spree_core (>= 0.30.1)
 
 GIT
@@ -90,7 +80,7 @@ GIT
 
 GIT
   remote: git://github.com/MaslovAnton/synergy_default_theme.git
-  revision: f789cc2057a7e7c6f9bcac78a5511d0f8c9b5efe
+  revision: 5deef1bdffbc3d98f489b5554383a52fddbaecda
   specs:
     synergy_default_theme (1.0.2)
       dalli (~> 1.0.3)
@@ -113,7 +103,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: e243894b9871d8515133f0d2fe6510086de68b09
+  revision: 2edbbff6c13247f2172ecf82c32bf6d2659fca99
   branch: 0-60-stable
   specs:
     spree (0.60.4)
@@ -155,18 +145,10 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_i18n.git
-  revision: 183ecc32a0909faa3a26efc38f28a1e50698e1db
+  revision: 2cdba183a28a131db9c05014287ff1249c015ad8
   specs:
     spree_i18n (1.0.0)
       spree_core (>= 0.30.0)
-
-PATH
-  remote: vendor/bundle/spree_email_to_friend
-  specs:
-    spree_email_to_friend (1.0.0)
-      recaptcha (>= 0.3.1)
-      spree_auth (>= 0.30.1)
-      spree_core (>= 0.30.1)
 
 GEM
   remote: http://rubygems.org/
@@ -203,10 +185,10 @@ GEM
       activesupport (= 3.0.10)
     activesupport (3.0.10)
     acts_as_list (0.1.2)
-    addressable (2.2.6)
+    addressable (2.2.7)
     arel (2.0.10)
     bcrypt-ruby (2.1.4)
-    braintree (2.13.1)
+    braintree (2.13.4)
       builder (>= 2.0.0)
     builder (2.1.2)
     cancan (1.6.4)
@@ -218,7 +200,7 @@ GEM
       net-ssh-gateway (>= 1.1.0)
     capistrano-deploy (0.1.2)
       capistrano (~> 2.6.0)
-    columnize (0.3.5)
+    columnize (0.3.6)
     dalli (1.0.5)
     devise (1.3.3)
       bcrypt-ruby (~> 2.1.2)
@@ -227,14 +209,14 @@ GEM
     dynamic_form (1.1.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    evernote (1.1.0)
-      thrift_client
+    evernote (1.2.0)
+      thrift_client (>= 0.8.1)
     faker (0.9.5)
       i18n (~> 0.4)
-    faraday (0.7.5)
-      addressable (~> 2.2.6)
-      multipart-post (~> 1.1.3)
-      rack (< 2, >= 1.1.0)
+    faraday (0.7.6)
+      addressable (~> 2.2)
+      multipart-post (~> 1.1)
+      rack (~> 1.1)
     formtastic (1.2.4)
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
@@ -246,7 +228,7 @@ GEM
       rails (~> 3.0)
       thor (~> 0.14.4)
     json (1.5.4)
-    kgio (2.7.0)
+    kgio (2.7.2)
     linecache (0.46)
       rbx-require-relative (> 0.0.4)
     mail (2.2.19)
@@ -262,7 +244,7 @@ GEM
     mime-types (1.17.2)
     multi_json (1.0.4)
     multi_xml (0.4.1)
-    multipart-post (1.1.4)
+    multipart-post (1.1.5)
     mysql2 (0.2.18)
     nested_set (1.6.7)
       activerecord (>= 3.0.0)
@@ -271,7 +253,7 @@ GEM
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
       net-ssh (>= 2.0.9)
-    net-ssh (2.2.1)
+    net-ssh (2.3.0)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     nokogiri (1.4.7)
@@ -284,15 +266,15 @@ GEM
       oauth (~> 0.4.0)
       oauth2 (~> 0.5.0)
     oauth (0.4.5)
-    oauth2 (0.5.1)
-      faraday (~> 0.7.4)
-      multi_json (~> 1.0.3)
-    orm_adapter (0.0.5)
+    oauth2 (0.5.2)
+      faraday (~> 0.7)
+      multi_json (~> 1.0)
+    orm_adapter (0.0.6)
     paperclip (2.3.11)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
     polyglot (0.3.3)
-    rack (1.2.4)
+    rack (1.2.5)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
     rack-test (0.5.7)
@@ -327,13 +309,17 @@ GEM
       ruby-debug-base (~> 0.10.4.0)
     ruby-debug-base (0.10.4)
       linecache (>= 0.3)
-    sass (3.1.12)
+    sass (3.1.15)
     spree_address_book (0.50.2)
       spree_auth (>= 0.50.0)
       spree_core (>= 0.50.0)
     spree_dynamic_sitemaps (0.50.1)
     spree_editor (0.50.1)
       spree_core (>= 0.40.0)
+    spree_email_to_friend (1.0.0)
+      recaptcha (>= 0.3.1)
+      spree_auth (>= 0.30.1)
+      spree_core (>= 0.30.1)
     spree_online_support (0.50.0)
       spree_core (>= 0.40.3)
     spree_robokassa (0.50.2)
@@ -361,17 +347,17 @@ GEM
       synergy_russian (= 0.2.8)
     synergy_russian (0.2.8)
     thor (0.14.6)
-    thrift (0.7.0)
-    thrift_client (0.7.1)
-      thrift (~> 0.7.0)
+    thrift (0.8.0)
+    thrift_client (0.8.1)
+      thrift (~> 0.8.0)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.31)
-    unicorn (4.1.1)
-      kgio (~> 2.4)
+    unicorn (4.2.0)
+      kgio (~> 2.6)
       rack
-      raindrops (~> 0.6)
+      raindrops (~> 0.7)
     warden (1.0.6)
       rack (>= 1.0)
     will_paginate (3.0.2)
@@ -392,9 +378,7 @@ DEPENDENCIES
   ruby-debug
   sass
   spree!
-  spree_affiliate!
   spree_compare_products!
-  spree_email_to_friend!
   spree_free_shipping!
   spree_i18n!
   spree_recently_viewed!

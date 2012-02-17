@@ -1,0 +1,34 @@
+have_func: checking for strlcpy() in string.h... -------------------- no
+
+"gcc -o conftest -I/opt/local/include -I. -I/home/antonio/.rvm/rubies/ree-1.8.7-2011.03/lib/ruby/1.8/i686-linux -I.  -D_FILE_OFFSET_BITS=64  -g -O2 -Wall -Werror conftest.c  -L. -L/home/antonio/.rvm/rubies/ree-1.8.7-2011.03/lib -Wl,-R/home/antonio/.rvm/rubies/ree-1.8.7-2011.03/lib -L.  -rdynamic -Wl,-export-dynamic     -lruby-static  -L/opt/local/lib -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: В функции «t»:
+conftest.c:5:53: ошибка: «strlcpy» undeclared (first use in this function)
+conftest.c:5:53: замечание: each undeclared identifier is reported only once for each function it appears in
+conftest.c:5:28: ошибка: variable «p» set but not used [-Werror=unused-but-set-variable]
+cc1: все предупреждения считать ошибками
+
+checked program was:
+/* begin */
+1: #include <string.h>
+2: 
+3: /*top*/
+4: int main() { return 0; }
+5: int t() { void ((*volatile p)()); p = (void ((*)()))strlcpy; return 0; }
+/* end */
+
+"gcc -o conftest -I/opt/local/include -I. -I/home/antonio/.rvm/rubies/ree-1.8.7-2011.03/lib/ruby/1.8/i686-linux -I.  -D_FILE_OFFSET_BITS=64  -g -O2 -Wall -Werror conftest.c  -L. -L/home/antonio/.rvm/rubies/ree-1.8.7-2011.03/lib -Wl,-R/home/antonio/.rvm/rubies/ree-1.8.7-2011.03/lib -L.  -rdynamic -Wl,-export-dynamic     -lruby-static  -L/opt/local/lib -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: В функции «t»:
+conftest.c:5:1: ошибка: неявная декларация функции «strlcpy» [-Werror=implicit-function-declaration]
+cc1: все предупреждения считать ошибками
+
+checked program was:
+/* begin */
+1: #include <string.h>
+2: 
+3: /*top*/
+4: int main() { return 0; }
+5: int t() { strlcpy(); return 0; }
+/* end */
+
+--------------------
+
