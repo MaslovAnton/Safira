@@ -5,7 +5,7 @@ gem 'rails', '3.0.10'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', '~> 0.2.7'
+gem 'mysql2', '0.2.6'
 gem 'ruby-debug'
 
 gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-60-stable'
