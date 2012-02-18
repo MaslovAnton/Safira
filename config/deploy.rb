@@ -53,7 +53,8 @@ namespace :deploy do
   end
 end
 
-
+#bundle exec unicorn_rails /home/antonio/Safira/config/unicorn.rb -E production -D
+#kill -QUIT `cat /home/antonio/Safira/tmp/pids/unicorn.pid`
 #set :default_environment, {
 # 'PATH' => "/path/to/.rvm/gems/ruby-1.9.2-p290/bin:/path/to/.rvm/bin:/path/to/.rvm/ruby-1.9.2-p290/bin:$PATH",
 #  'RUBY_VERSION' => 'ruby 1.8.7',
