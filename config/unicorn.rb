@@ -1,6 +1,6 @@
 
-deploy_to  = "/home/antonio/Unicorn"
-#deploy_to  = "/srv/safira"
+#deploy_to  = "/home/antonio/Unicorn"
+deploy_to  = "/srv/safira"
 rails_root = "#{deploy_to}/current"
 pid_file   = "#{deploy_to}/shared/pids/unicorn.pid"
 socket_file= "#{deploy_to}/shared/unicorn.sock"
