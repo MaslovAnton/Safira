@@ -23,7 +23,7 @@ body {
 	background-repeat:repeat;
 	text-shadow: none;
 	font-family: Arial, Helvetica, sans-serif;
-	color:#666666;
+	color: #666666;
   margin: 0;
 }
 
@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header_panel a {
   text-decoration: none;
-  color: black;
+  color: #333333;
 }
 
 .header_panel a img {
@@ -220,7 +220,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar ul li a {
-  color: black;
+  font-weight: bold;
+  color: #333333;
   text-decoration: none;
 }
 
@@ -327,6 +328,7 @@ ul.nav-list li {
 
 ul.nav-list li.current a {
   font-weight: bold;
+  color: #04BFEA;
 }
 
 ul.nav-list ul.nav-list {
@@ -335,10 +337,12 @@ ul.nav-list ul.nav-list {
 
 ul.nav-list ul.nav-list li a {
   font-weight: normal;
+  color: #333333;
 }
 
 ul.nav-list ul.nav-list li.current a {
   font-weight: bold;
+  color: #04BFEA;
 }
 
 #taxonomies {
@@ -628,7 +632,7 @@ float:left;
 .product-listing li a.info .price {
   font-size: 16pt;
   font-weight: normal;
-  color: black;
+  color: #333333;
 }
 
 ul.thumbnails li {

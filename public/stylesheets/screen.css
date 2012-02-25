@@ -680,7 +680,7 @@ p button img { margin: 0 5px 0 0; }
 .product-listing li a {
   display: block;
   text-decoration: none;
-  color: #111111;
+  color: #666666;
 }
 .product-listing li a.info {
   position: absolute;
