@@ -438,7 +438,7 @@ ul#nav-bar li.cart-indicator a.full { background-image: url(../images/cart-full_
 
 }
 
-.pagination a, .pagination span.disabled, .pagination em.current {
+.pagination a, .pagination span.disabled, .pagination em {
 		font-size:13px;
 		padding:2px 8px;
 		margin-right:7px;
@@ -450,7 +450,7 @@ ul#nav-bar li.cart-indicator a.full { background-image: url(../images/cart-full_
 		-moz-border-radius: 3px;
 	}
 
-	.pagination em.current {
+	.pagination em {
     font-style: inherit;
 /*    font-size:13px;
 		padding:2px 8px;

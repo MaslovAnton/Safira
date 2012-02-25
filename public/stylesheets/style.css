@@ -38,12 +38,12 @@ body, td, form {
   background:#04bfea
 }
 
-.color-line p {
+.color-line p.zakaz_tel {
   color: #fff;
   font-family: Ubuntu, Helvetica,sans-serif;
   font-size: 14px;
-  text-align: center;
-  margin: 0;
+  text-align: right;
+  margin: 0 15px 0 0;
 
 }
 
@@ -67,7 +67,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 1058px;
   height: 102px;
   display: table;
-  margin-top: 4px;
 }
 
 .header_panel .header_panel_logo {
@@ -941,15 +940,22 @@ div.star-rating-hover a {
   z-index: 100;
 }
 
-#top_panel {
+/*#top_panel {
   height: 3em;
   padding-top: 1em;
-}
+}*/
 
-#top_login_bar {
+#top_login_bar #log_info {
+  font-family: Ubuntu,Helvetica,sans-serif;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 15px;
   text-align: left;
   /*margin-top: 1em;*/
   float: left;
+}
+#top_login_bar #log_info a {
+   color: #fff;
 }
 
 ul.header_menu {
@@ -987,7 +993,7 @@ ul.header_menu li a {
 }
 
 ul.header_menu li a:hover {
-/*  text-decoration: underline;*/
+  /*text-decoration: underline;*/
   color: #04BFEA;
 }
 
@@ -1317,6 +1323,17 @@ ul.footer_menu li a {
   font-size:18px;
   color: #000;
   text-decoration: none;
+  padding: 7px 8px;
+
+}
+
+ul.footer_menu li a:hover {
+    border-radius: 3px 3px 3px 3px;
+    background-color: #000000;
+    background-image: url("../images/mega-menu/grad.png");
+    color: #FFFFFF;
+    font-style: inherit;
+
 }
 
 #footer-wrapper {
@@ -1355,9 +1372,9 @@ div.last table tr td {
     padding: 0;
 }
 
-.footer-container-min h6 {
+.footer-container-min h6, .slogan h6 {
     font-family: Cuprum;
-    font-size: 17.3px;
+    font-size: 17px;
     margin-bottom: 8px;
     text-transform: uppercase;
      font-weight: normal;
@@ -1455,3 +1472,31 @@ margin-bottom:20px !important; }
 		background-image:url('../images/social/od.png');
 		background-position: -0px -27px;
 	}
+/*-------------------------------------------------------------------------------------------------*/
+	/*FAQ */
+/*-------------------------------------------------------------------------------------------------*/
+.faq {
+    float: left;
+    margin-right: 0;
+    margin-top: 20px;
+    background-color: #F1F2F1;
+    box-shadow: 0 1px 2px #AAAAAA;
+   padding: 15px;
+
+}
+.faq:hover {
+	background-color:#e6e6e6;
+	background-image: url(../images/1w.png);
+	-moz-box-shadow:0px 1px 2px #aaa;
+	-webkit-box-shadow:0px 1px 2px #aaa;
+	box-shadow:0px 1px 2px #aaa;
+	-webkit-transition: background-color 0.4s ease-in-out;
+   -moz-transition: background-color 0.4s ease-in-out;
+   -o-transition: background-color 0.4s ease-in-out;
+   -ms-transition: background-color 0.4s ease-in-out;
+   transition: background-color 0.4s ease-in-out;
+}
+.small-italic {
+    font-size: 90%;
+    font-style: italic;
+}

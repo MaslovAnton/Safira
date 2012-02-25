@@ -8,11 +8,56 @@
  * http://docs.jquery.com/UI/Tabs#theming
  */
 .ui-tabs { position: relative; padding: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-.ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; }
-.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
+.ui-tabs .ui-tabs-nav {
+    margin: 0;
+    /*padding: .2em .2em 0;*/
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #DDDDDD;
+}
+.ui-tabs .ui-tabs-nav li {
+list-style: none;
+float: left;
+position: relative;
+top: 1px; margin: 0 .2em 1px 0;
+border-bottom: 0 !important;
+padding: 0;
+white-space: nowrap;
+}
 .ui-tabs .ui-tabs-nav li a { float: left; padding: .5em 1em; text-decoration: none; }
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
 .ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
-.ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 1.4em; background: none; }
+.ui-tabs .ui-tabs-panel {
+    display: block;
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #F3F3F3;
+    border-color: #D4D4D4;
+    border-style: solid;
+    border-width: 0 1px 1px;
+
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+
+}
 .ui-tabs .ui-tabs-hide { display: none !important; }
+#tabs{
+border: none;
+background: none repeat scroll 0 0 #F9F9F9;
+}
+
+#page_content .ui-state-default {
+ background: url("/images/mega-menu/grad1.png") repeat scroll 0 0 #F9F9F9;
+
+}
+#page_content .ui-state-active{
+background: #F9F9F9;
+}
+#page_content .ui-state-default a {
+color: #212121;
+}
