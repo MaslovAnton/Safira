@@ -56,7 +56,7 @@ GIT
 
 GIT
   remote: git://github.com/MaslovAnton/spree_variant_options.git
-  revision: 6dbaffe93f0c978c2480f06311a83f49271248c5
+  revision: 6b6034b442c6d1aba4b8b5f964cc215a9bc07708
   branch: masteer
   specs:
     spree_variant_options (0.1.1)
@@ -73,7 +73,7 @@ GIT
 
 GIT
   remote: git://github.com/MaslovAnton/synergy_default_theme.git
-  revision: 59a3d24e33e9c54e4b2489744b51d52c5748d228
+  revision: 3c90e5f541e31560940b2281a2779354cfb27719
   specs:
     synergy_default_theme (1.0.2)
       dalli (~> 1.0.3)

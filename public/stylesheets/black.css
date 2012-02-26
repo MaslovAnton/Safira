@@ -193,7 +193,7 @@ margin-right: 0;
 }
 .black ul.mega-menu .sub li.mega-hdr li a:hover {
 	background: #000;
-	background-image:url('../images/grad1.png');
+	background-image:url('../images/mega-menu/grad1.png');
 	outline: 0;
 	color:#fff;
 	text-shadow:none !important;
