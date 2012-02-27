@@ -1,0 +1,60 @@
+<% content_for :head do %>
+
+<%= stylesheet_link_tag 'nivo-slider.css', 'nivo-default.css' %>
+
+<%= javascript_include_tag 'nivo-slider/jquery.nivo.slider.pack.js', :cache => 'nivo-slider' %>
+
+
+<% end %>
+
+
+<% content_for :banner do %>
+
+              <!-- SLIDER -->
+            <div class="span-24 separator"></div>
+            <div class="span-24 notopmargin">
+            <div class="span-24 slider-area">
+            	<div class="theme-default">
+                    <div id="slider" class="nivoSlider">
+                        <a href="/dostavka"><img src="/images/nivo-slider/slide-1.jpg" alt="" /></a>
+                        <a href="/surprise"><img src="/images/nivo-slider/slide-2.jpg" alt=""  /></a>
+                        <a href="/t/zhenskaya-kollektsiya"><img src="/images/nivo-slider/slide-3.jpg" alt="" /></a>
+                        <a href="/t/muzhskaya-kollektsiya"><img src="/images/nivo-slider/slide-4.jpg" alt=""  /></a>
+
+                    </div>
+                    <div id="htmlcaption" class="nivo-html-caption">
+                        <strong> <a href="#">Подробности</a> </strong>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- END SLIDER -->
+
+   <div class="slogan">
+                <div class="span-24">
+                	<div class="span-18 notopmargin">
+                    	<h1>НЕСКОЛЬКО СЛОВ О МАГАЗИНЕ <a class="link" href="http://safiramarket.ru">SAFIRAMARKET</a></h1>
+<p align="left">В нашем магазине представлена модная, стильная женская, мужская и детская одежда, а также сумки и аксессуары. Кроме того, Вы найдете подиумные коллекции от домов мод Франции, Италии, Англии, Америки, Германии и других стран-законодателей в мире fashion-индустрии. Мы предлагаем новые коллекции от<span class=strong> KarenMillen, HerveLeger, Chloe, D&G, Gucci, LV, MiuMiu, Moncler, VDP, JuicyCouture, DenisSimachev, Braccialini, Burberry, Calvin Klein, D&G, Diesel, Emporio Armani, Cavalli, Furla, Guess, Hello Kitty, Miss Sixty, Nike</span>, и других не менее известных и модных брендов – и это лишь малая часть ассортимента нашего интернет-магазина safiramarket.ru.</p>
+<p align="left">Для любителей выделяться среди серой массы мы еженедельно обновляем эксклюзивные модели редких модных брендов. Даже если Вам надоела модная одежда известных Домов Моды, Вы зашли куда нужно - мы с удовольствием подобрали коллекцию эксклюзивных вещей, которые можно встретить только у нас.</p>
+<p align="left">Ну а если Вы считаешь себя самым привиредливым покупателем, наши менеджеры с удовольствием выслушают ваши пожелания и помогут в выборе вещей для вашего стиля. Помимо вещей для всей семьи, на нашем сайте safiramarket.ru можно подобрать одежду для своих любимых питомцев известных мировых брендов. Создавай умиленные лица прохожих при виде вашего питомца с нашим интернет магазином.</p>
+<p align="left">Мы ценим каждого из Вас, поэтому предлагаем Вашему вниманию только стильные и оригинальные коллекции одежды и аксессуаров, которые постоянно обновляются и пополняются новинками с подиумов мировой моды, а также тщательным образом помогаем Вам подобрать размер и конечно же получить желаемые предметы гардероба.</p>
+<h6>Одевайтесь со вкусом в нашем интернет-магазине и будьте неповторимы!</h6>
+<h6>Мы рады абсолютно любым предложениям.</h6>
+<h6>Приятных покупок!</h6>
+                    </div>
+                 </div>
+   </div>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<% end %>
+
+<% @taxons.each do |taxon| %>
+  <div class="taxon">
+    <h2><%= taxon.name %></h2>
+
+    <%= render :partial => "shared/products", :locals => {:products => taxon_preview(taxon, 8), :taxon => taxon} %>
+  </div>
+<% end %>
