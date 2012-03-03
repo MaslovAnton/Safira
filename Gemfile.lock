@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/MaslovAnton/spree-reviews.git
-  revision: 6cab323e52f0e8adc50e63eb0696fec23b597b46
-  specs:
-    spree_reviews (0.50.1)
-      spree_core (>= 0.50.0)
-
-GIT
   remote: git://github.com/MaslovAnton/spree-vendors.git
   revision: 47e63aa5e71b68a228ac1efa351e8d6b500b58ca
   specs:
@@ -79,6 +72,13 @@ GIT
   specs:
     spree_store_credits (1.0.1)
       spree_core (>= 0.30.1)
+
+GIT
+  remote: git://github.com/romul/spree-reviews.git
+  revision: b51e282d80ac0db539a08bd78ba46bcdb86ca2fc
+  specs:
+    spree_reviews (0.50.1)
+      spree_core (>= 0.50.0)
 
 GIT
   remote: git://github.com/romul/spree_compare_products.git
