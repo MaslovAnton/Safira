@@ -1,0 +1,54 @@
+<%= form_for :order, :url => populate_orders_url do |f| %>
+<%= hook :inside_product_cart_form do %>
+<div id="cart_wrapper">
+
+    <dl class="part-numbers clearfix">
+      <dt>КОД МОДЕЛИ</dt>
+      <dd><%= @product.sku %></dd>
+    </dl>
+  <% if product_price(@product) %>
+    <%= hook :product_price do %>
+      <p class="prices">
+        <span class="price selling"><%= product_price(@product) %></span>
+      </p>
+    <% end %>
+  <% end %>
+    <dt><span class="stock"><%= @product.has_stock? ? "В НАЛИЧИИ" : "ПОД ЗАКАЗ" %></span></dt>
+
+ <% if @product.colors.present? %>
+  <div id="product-variants">
+    <h3>Цвет:</h3>
+      <ul class="variant-option-values">
+      <% @product.colors.each do |color| %>
+        <li>
+          <div class="product_image_color">
+            <%= link_to mini_image(color), product_url(color) %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<div class="clear"></div>
+ <% end %>
+
+<%= render 'variant_options' %>
+
+  <% if @product.has_stock? || Spree::Config[:allow_backorders] %>
+    <%= hidden_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"),
+      1, :class => "title", :size => 3 %>
+    &nbsp;
+    <button type='submit' class='add-to-cart'>
+      <%= t('add_to_cart') %>
+    </button>
+  <% else %>
+    <%= content_tag('strong', t('out_of_stock')) %>
+  <% end %>
+
+</div>
+
+<% end %>
+<% end %>
+
+<% content_for :head do %>
+  <%= javascript_include_tag 'product' %>
+<% end %>

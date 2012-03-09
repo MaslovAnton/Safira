@@ -171,7 +171,7 @@ function VariantOptions(options, allow_backorders) {
     } else {
       $('#variant_id').val('');
       $('button[type=submit]').attr('disabled', true).fadeTo(0, 0.5);
-      $('.prices .price').addClass('unselected').text('Выберите');
+
     }
   }
 

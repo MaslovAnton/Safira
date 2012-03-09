@@ -206,7 +206,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .sidebar {
   float: left;
-  width: 250px;
+  width: 175px;
   text-align: left;
 }
 
@@ -478,7 +478,7 @@ h2 a:hover {
 #cart_wrapper {
   text-align: right;
   float: right;
-  width: 220px;
+  width: 255px;
 }
 
 #product-variants {
@@ -513,7 +513,7 @@ button, a.button, input.button {
 }
 
 .tooltip {
-  z-index: 100;
+  z-index: 10000;
   width: 324px;
 }
 
@@ -580,12 +580,11 @@ float:left;
   background-color: #F1F2F1;
   box-shadow: 0 1px 2px #AAAAAA;
   border: 1px solid white;
-  margin: 0 0 15px 0;
+  margin: 0 4px 15px 0;
   padding: 2em 0 0 0;
-  width: 175px;
+  width: 200px;
 /*  width: 248px;*/
-  height: 230px;
-  margin-right: 10px;
+  height: 300px;
 }
 
 .product-listing li:hover {
@@ -610,7 +609,7 @@ float:left;
   display: table-cell;
   text-align: center;
   vertical-align: middle;
-  height: 130px;
+  height: 200px;
   width: 248px;
 }
 
@@ -782,6 +781,25 @@ margin-top:10px;
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+
+}
+
+.product_image_color{
+  float: center;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: #F9F9F9;
+  border: 2px solid #EEEEEE;
+  border-radius: 4px 4px 4px 4px;
+  display: block;
+  margin: 3px 3px 0 0;
+  padding: 1px;
+}
+.variant-option-values li .product_image_color a{
+    margin: 0;
+    padding: 0;
+    border: none;
 
 }
 .similar_product_info{
@@ -1208,7 +1226,6 @@ a.zvonok {
   margin-right: auto;
   display: block;
   text-align: center;
-  width: 190px;
   color: #fff;
   background: #000;
   font-size: 120%;

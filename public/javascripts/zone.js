@@ -1,16 +1,16 @@
-$j(function() {
+$j(function() { 
   if ($j('#country_based').attr('checked')) {
     show_country();
   } else if ($j('#state_based').attr('checked')) {
     show_state();
-  } else {
+  } else {        
     show_zone();
   }
   $j('#country_based').click(function() { show_country();} );
   $j('#state_based').click(function() { show_state();} );
-  $j('#zone_based').click(function() { show_zone();} );
-})
-
+  $j('#zone_based').click(function() { show_zone();} ); 
+})   
+                                                        
 var show_country = function() {
   $j('#state_members :input').each(function() { $(this).attr('disabled','disabled'); })
   $j('#state_members').hide();
