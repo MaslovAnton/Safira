@@ -7,12 +7,9 @@
 }
 
 #reviews div.review {
-    margin-top: 20px;
-    padding: 15px 15px 3px;
-}
-
-form.new_review {
-    padding: 15px 15px 3px;
+/*  border-bottom: 1px #2222aa dashed;*/
+  margin-bottom: 10px;
+  padding: 10px 10px 1px 10px;
 }
 
 #reviews div.review span.title {

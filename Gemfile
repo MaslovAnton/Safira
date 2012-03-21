@@ -5,11 +5,11 @@ gem 'rails', '3.0.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', '~> 0.2.7'
+gem 'mysql2', '0.2.6'
 gem 'ruby-debug'
 
-#gem 'spree', '~> 0.60.5'
-gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-60-stable'
+gem 'spree', '~> 0.60.6'
+#gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-60-stable'
 
 gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git', :ref => 'a185d160047ce54f07bd47f7d417d9e2681fbb07'
 gem 'recaptcha'
