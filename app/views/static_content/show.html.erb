@@ -2,12 +2,17 @@
   <meta name="title" content="<%=@page.title%>">
 <% end -%>
 <% content_for :sidebar do %>
-  <% if "products" == @current_controller && @taxon %>
-    <%= render :partial => "shared/filters" %>
-  <% else %>
-    <%= render :partial => "shared/taxonomies" %>
-  <% end %>
+        <% if Page.sidebar_links.any? %>
+          <div id="sidebar_menu">
+            <ul class="sidebar_menu">
+              <% for page in Page.sidebar_links do %>
+                <li><%= link_to page.title, page.link %></li>
+              <% end %>
+            </ul>
+          </div>
+          <% end %>
 <% end %>
+
 <h1><%= @page.title %></h1>
 <div id="page_content">
 <script>

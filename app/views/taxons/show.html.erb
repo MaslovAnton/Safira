@@ -5,6 +5,8 @@
     <%= render :partial => "shared/taxonomies" %>
     <%= render(:partial => "shared/filters") if @taxon.children.empty? %>
   <% end %>
+
+<div id="image_sidebar"><%= link_to image_tag("akcii.png", :alt => "Safiramarket akcii"), root_url+'akcii' %></div>
 <% end %>
 
 <% if @taxon.children.empty? || !params[:keywords].blank? %>

@@ -775,8 +775,8 @@ ActiveRecord::Schema.define(:version => 20110906194311) do
     t.string   "persistence_token"
     t.string   "reset_password_token"
     t.string   "perishable_token"
-    t.integer  "sign_in_count",        :default => 0, :null => false
-    t.integer  "failed_attempts",      :default => 0, :null => false
+    t.integer  "sign_in_count",        :default => 0,     :null => false
+    t.integer  "failed_attempts",      :default => 0,     :null => false
     t.datetime "last_request_at"
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
@@ -793,6 +793,16 @@ ActiveRecord::Schema.define(:version => 20110906194311) do
     t.string   "website"
     t.string   "full_name"
     t.string   "phone"
+    t.string   "recipient"
+    t.string   "juridical_address"
+    t.string   "inn"
+    t.string   "kpp"
+    t.string   "recipient_bank"
+    t.string   "settlement_acc"
+    t.string   "corr"
+    t.string   "bik"
+    t.boolean  "nds"
+    t.boolean  "juridical",            :default => false
   end
 
   add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token"
