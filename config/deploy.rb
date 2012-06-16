@@ -3,11 +3,11 @@ require 'rvm/capistrano' # Для работы rvm
 #require 'bundler/capistrano' # Для работы bundler. При изменении гемов bundler автоматически обновит все гемы на сервере, чтобы они в точности соответствовали гемам разработчика.
 
 set :using_rvm, true
-set :rvm_ruby_string, 'ree@safira'
+set :rvm_ruby_string, '1.9.2-head@safira'
 
 set :application, "safira"
 set :rails_env, "production"
-set :domain, "antonio@188.127.249.141" # Это необходимо для деплоя через ssh. Именно ради этого я настоятельно советовал сразу же залить на сервер свой ключ, чтобы не вводить паролей.
+set :domain, "antonio@78.47.194.44" # Это необходимо для деплоя через ssh. Именно ради этого я настоятельно советовал сразу же залить на сервер свой ключ, чтобы не вводить паролей.
 set :deploy_to, "/srv/#{application}"
 set :use_sudo, false
 set :unicorn_conf, "#{deploy_to}/current/config/unicorn.rb"
@@ -21,9 +21,9 @@ set :repository,  "git@github.com:MaslovAnton/Safira.git" # Путь до ваш
 set :branch, "master" # Ветка из которой будем тянуть код для деплоя.
 set :deploy_via, :remote_cache # Указание на то, что стоит хранить кеш репозитария локально и с каждым деплоем лишь подтягивать произведенные изменения. Очень актуально для больших и тяжелых репозитариев.
 
-role :web, "188.127.249.141"
-role :app, "188.127.249.141"
-role :db,  "188.127.249.141" , :primary => true
+role :web, "78.47.194.44"
+role :app, "78.47.194.44"
+role :db,  "78.47.194.44" , :primary => true
 
 after 'deploy:update_code', :roles => :app do
   # Здесь для примера вставлен только один конфиг с приватными данными - database.yml. Обычно для таких вещей создают папку /srv/myapp/shared/config и кладут файлы туда. При каждом деплое создаются ссылки на них в нужные места приложения.
