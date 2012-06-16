@@ -7,6 +7,7 @@ gem 'rails', '3.0.14'
 
 gem 'mysql2', '0.2.6'
 gem 'ruby-debug'
+gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'spree', :git => 'git://github.com/MaslovAnton/spree.git', :tag => 'v0.60.6'
 #gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-60-stable'
@@ -45,6 +46,7 @@ gem 'synergy_inventory_management', :git => 'git://github.com/secoint/synergy_in
 
 
 group :production do
+  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'unicorn'
 end
 
