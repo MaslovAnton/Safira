@@ -1182,6 +1182,9 @@ div.rating-cancel {
 #page_content {
   padding-left: 5px;
 }
+#page_content p, #page_content ol {
+  font-size: 14px;
+}
 
 #registration #guest_checkout {
   width: 51%;
